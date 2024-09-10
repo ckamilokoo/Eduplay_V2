@@ -151,6 +151,11 @@ async def test():
     return {"message": "API is working!"}
 
 
+@app.post("/test_2")
+async def test():
+    return {"message": "la api funciona el metodo post"}
+
+
 
 @app.post("/send_commands")
 async def send_commands(commands: CommandList):

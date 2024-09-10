@@ -145,6 +145,12 @@ async def disconnect():
     await disconnect_all_devices()
     return {"success": True, "message": "Disconnected successfully"}
 
+# Ruta GET para pruebas
+@app.get("/test")
+async def test():
+    return {"message": "API is working!"}
+
+
 
 @app.post("/send_commands")
 async def send_commands(commands: CommandList):
